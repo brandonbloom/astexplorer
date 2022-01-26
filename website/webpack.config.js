@@ -33,9 +33,15 @@ const plugins = [
   new webpack.IgnorePlugin(/parser-yaml/, /\/prettier/),
 
   // go //
+  //new webpack.NormalModuleReplacementPlugin(
+  //  /^go$/,
+  //  require.resolve('astexplorer-go/go'),
+  //),
+
+  // cue //
   new webpack.NormalModuleReplacementPlugin(
-    /^go$/,
-    require.resolve('astexplorer-go/go'),
+    /^cue$/,
+    require.resolve('astexplorer-cue/go'),
   ),
 
   // eslint //

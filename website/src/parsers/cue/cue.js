@@ -1,19 +1,19 @@
 import defaultParserInterface from '../utils/defaultParserInterface'
 
-const ID = 'go'
+const ID = 'cue'
 
 export default {
   ...defaultParserInterface,
 
   id: ID,
   displayName: ID,
-  version: '1.13.4',
-  homepage: 'https://golang.org/pkg/go/',
+  version: '0.4.1',
+  homepage: 'https://cuelang.org/',
   _ignoredProperties: new Set(['_type']),
   locationProps: new Set(['Loc']),
 
   async loadParser(callback) {
-    require(['astexplorer-go'], async parser => {
+    require(['astexplorer-cue'], async parser => {
       await parser.init()
       callback(parser)
     })
